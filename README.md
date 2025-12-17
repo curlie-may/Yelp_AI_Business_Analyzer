@@ -1,5 +1,5 @@
 ## Yelp_Business_Analyzer
-I built this app for small business owners who don’t have access to a data analytics team but still want meaningful insight into how their business is perceived. I initially envisioned a more analytics-driven product, where a business owner could ask voice-based questions like “Graph my star rating from 2022 to 2025” and receive charts or trends in response. I set up the infrastructure for this approach early on.
+I built this app with small business owners in mind who don’t have access to a data analytics team but still want meaningful insight into how their business is perceived. I initially envisioned a more analytics-driven product, where a business owner could ask voice-based questions like “Graph my star rating from 2022 to 2025” and receive charts or trends in response. I set up the infrastructure for this approach early on.
 
 As the project evolved, I discovered a limitation. The Yelp AI API cannot reliably provide concrete, date-specific review or rating data. While the AI can sound confident when answering year-based questions, those answers are not guaranteed to be correct. This forced a significant rethink of the product. In light of this limitation, I added guardrails to prevent direct answers to date-specific questions and reframed the app’s purpose.
 
