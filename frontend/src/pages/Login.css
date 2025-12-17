@@ -1,0 +1,254 @@
+/* Yelp Brand Colors */
+:root {
+  --yelp-red: #D32323;
+  --yelp-red-hover: #AF1E1E;
+  --text-dark: #333333;
+  --text-medium: #666666;
+  --border-color: #E6E6E6;
+  --white: #FFFFFF;
+}
+
+/* Login Container */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F5F5;
+  padding: 20px;
+}
+
+.login-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Typography */
+.login-card h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 8px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--text-medium);
+  margin: 0 0 32px 0;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.required {
+  color: var(--yelp-red);
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--yelp-red);
+}
+
+.form-group input::placeholder {
+  color: #999999;
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+  background-color: #F9F9F9;
+  cursor: not-allowed;
+}
+
+/* Buttons */
+.submit-button {
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--yelp-red);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 8px;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: var(--yelp-red-hover);
+}
+
+.submit-button:disabled {
+  background-color: #CCCCCC;
+  cursor: not-allowed;
+}
+
+.back-button {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-medium);
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 16px;
+}
+
+.back-button:hover {
+  border-color: var(--text-medium);
+  color: var(--text-dark);
+}
+
+/* Error Message */
+.error-message {
+  padding: 12px;
+  background-color: #FEF2F2;
+  border: 1px solid #FCA5A5;
+  border-radius: 4px;
+  color: #991B1B;
+  font-size: 14px;
+}
+
+/* Search Results */
+.search-results h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 8px 0;
+}
+
+.results-count {
+  font-size: 14px;
+  color: var(--text-medium);
+  margin: 0 0 20px 0;
+}
+
+.business-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.business-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.business-item:hover {
+  border-color: var(--yelp-red);
+  background-color: #FFFAFA;
+}
+
+.business-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 4px 0;
+}
+
+.business-address {
+  font-size: 14px;
+  color: var(--text-medium);
+  margin: 0 0 4px 0;
+}
+
+.business-phone {
+  font-size: 14px;
+  color: var(--text-medium);
+  margin: 0 0 4px 0;
+}
+
+.business-rating {
+  font-size: 14px;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.business-arrow {
+  font-size: 24px;
+  color: var(--text-medium);
+  transition: transform 0.2s;
+}
+
+.business-item:hover .business-arrow {
+  transform: translateX(4px);
+  color: var(--yelp-red);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 25px 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .login-card h1 {
+    font-size: 22px;
+    margin: 0 0 5px 0;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin: 0 0 24px 0;
+  }
+
+  .login-form {
+    gap: 15px;
+  }
+
+  .submit-button {
+    margin-top: 4px;
+  }
+
+  .back-button {
+    margin-top: 12px;
+  }
+}
